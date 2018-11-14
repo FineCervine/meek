@@ -2,7 +2,7 @@
 A shy style that hardly works.
 
 ## Intro
-The purpose of this stylesheet is to make eClass (Moodle) a bit more usuable at
+The purpose of this stylesheet is to make eClass (Moodle) a bit more usable at
 night. It also adds a few animations and increases spacing between divs.
 This does not fix extra styling done on pages were there is custom text colours 
 or more; in fact, it tends to break things.
