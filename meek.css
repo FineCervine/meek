@@ -585,17 +585,19 @@ a .icon {
 	color: var(--accent);
 }
 
-/* body text of submission editor */
-body#page-mod-assign-editsubmission {
+/* body text of submission editor and complete feedback */
+body#page-mod-assign-editsubmission,
+body#page-mod-feedback-complete {
 	font-family: var(--font);
 	color: var(--text1);
 }
 
-/* textfield in a form, here in the submission editor */
+/* textfield in a form, here in the submission editor, but hits more */
 .form-control {
 	font-family: var(--font);
-	color: var(--text2);
+	color: var(--text2) !important;
 	background-color: var(--bg1);
+	transition: all.25s ease-in-out;
 }
 
 .form-control::placeholder {
@@ -603,10 +605,20 @@ body#page-mod-assign-editsubmission {
 }
 
 .form-control:focus {
-	background-color: var(--accent);
-	color: var(--bg2);
-	border-color: var(--bg1);
+	background-color: var(--bg3);
+	border-color: var(--accent);
 }
+	
+/* textfield border colour with danger/warning */
+.has-danger .form-control {
+	border-color: var(--negativefg);
+}
+	
+/* textfield error icon colour*/
+.text-danger, .notconnected, .que .validationerror, .text-error {
+	color: var(--negativefg) !important;
+}
+
 
 /* file icon at base of submission editor */
 .fp-select .fp-thumbnail, .fp-select .fp-thumbnail img {
