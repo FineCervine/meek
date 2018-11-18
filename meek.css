@@ -619,7 +619,6 @@ body#page-mod-feedback-complete {
 	color: var(--negativefg) !important;
 }
 
-
 /* file icon at base of submission editor */
 .fp-select .fp-thumbnail, .fp-select .fp-thumbnail img {
 	background: var(--bg1);
