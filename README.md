@@ -1,6 +1,8 @@
 # meek
 A shy style that hardly works.
 
+> Update someday this semester.
+
 ## Intro
 The purpose of this stylesheet is to make eClass (Moodle) a bit more usable at
 night. It also adds a few animations and increases spacing between divs.
