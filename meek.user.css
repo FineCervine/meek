@@ -1,0 +1,1027 @@
+/* ==UserStyle==
+@name           meek (eClass)
+@namespace      StylishThemes
+@version        1.0.0
+@description    A shy style that hardly works. Alternate theme for eClass (Moodle)
+@author         FineCervine (https://github.com/FineCervine)
+@license MIT
+@homepageURL  https://github.com/FineCervine/meek
+@updateURL https://raw.githubusercontent.com/FineCervine/meek/master/meek.css
+
+
+@advanced color bg0 "Main bg" #000000
+@advanced color bg1 "Sub-bg 1" #2d2330
+@advanced color bg2 "Sub-bg 2" #0e0b0f
+@advanced color bg3 "Sub-bg 3" #625166
+@advanced color text1 "Text 1" #d0c9c6
+@advanced color text2 "Text 2" #b7bdc1
+@advanced color accent "Accent" #b0a8e6
+
+@advanced text font "Font" "Anonymous Pro"
+
+@advanced color calfontcol "Calendar font colour" #ffffff
+@advanced color callinkcol "Calendar link colour" #000000
+@advanced color calovercol "Calendar over colour" #808080
+
+@advanced color positivebg "Positive bg colour" #62b08e
+@advanced color positivefg "Positive fg colour" #84eec0
+@advanced color negativefg "Negative fg colour" #ff856e
+
+==/UserStyle== */
+
+@-moz-document domain("eclass.srv.ualberta.ca") {
+/*ayyo*/
+/*meek wip : absolute mess edition*/
+/*now as (kind of) a user.css*/
+
+		/*Procastination*/
+
+:root {
+	/* main */
+	--bg0:    /*[[bg0]]*/ !important;
+	--bg1:    /*[[bg1]]*/ !important;
+	--bg2:    /*[[bg2]]*/ !important;
+	--bg3:    /*[[bg3]]*/ !important;
+	--text1:  /*[[text1]]*/ !important;
+	--text2:  /*[[text2]]*/ !important;
+	--accent: /*[[accent]]*/ !important;
+
+	/* font */
+	--font: /*[[font]]*/ !important;
+
+	/* calendar */
+	--calfontcol: /*[[calfontcol]]*/ !important;
+	--callinkcol: /*[[callinkcol]]*/ !important;
+	--calovercol: /*[[calovercol]]*/ !important;
+
+	/* states */
+	--positivebg: /*[[positivebg]]*/ !important;
+	--positivefg: /*[[positivefg]]*/ !important;
+	--negativefg: /*[[negativefg]]*/ !important;
+}
+
+		/* Header/Footer */
+
+/* main navbar stuff */
+.navbar-light {
+	border-bottom: none;
+	background: none;
+	background-color: var(--bg1) !important;
+}
+
+.navbar-light .navbar-brand {
+	opacity: 0;
+}
+
+.navbar-light .navbar-brand .site-name{
+	font-family: 'Anonymous Pro';
+	color: var(--accent) !important;
+}
+
+
+.navbar-fixed-top .navbar-inner {
+	background: none !important;
+	background-color: var(--bg2) !important;
+	border-bottom: 4px solid var(--bg1)
+}
+
+/* navbar items */
+.navbar-light .navbar-nav .nav-link {
+	font-family: var(--font);
+}
+
+/* user menu  and user text (name) fade (tp rt corner) */
+
+/*
+.usermenu {
+	opacity: 0;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+}
+
+.usermenu:hover {
+	opacity: 1;
+}
+*/
+
+.usertext {
+	filter: blur(3px);
+	font-size: 0.4em;
+	transition: all.25s ease-in-out;
+}
+
+.usertext:hover {
+	filter: blur(0px);
+	font-size: 1.0em;
+}
+
+#page-footer.bg-inverse {
+	background-color: var(--bg2) !important;
+	filter: blur(2px);
+}
+
+/* dropdown menu tp rt */
+.dropdown-menu {
+	background-color: var(--bg3);
+	border-color: var(--accent);
+	border-radius: 5px;
+}
+
+.dropdown-menu .dropdown-item {
+	border-bottom: 1px dotted var(--accent);
+	font-family: var(--font);
+	text-transform: lowercase;
+	transition: all.25s ease-in-out;
+}
+
+.dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
+	background-color: var(--bg2);
+}
+
+.dropdown-item {
+	color: var(--text1) !important;
+}
+
+		/* Drawer Stuff */
+
+/* navigation drawer bg */
+#nav-drawer {
+	background-color: var(--bg1);
+	border: 1px dotted var(--accent);
+	/*
+	border-width: 1px 1px 0px 0px;
+	border-style: dotted;
+	border-color: var(--accent);
+	*/
+}
+
+/* index body properties */
+body#page-my-index {
+	color: var(--text2);
+}
+
+/* navigation drawer content padding */
+.list-group {
+	padding-right: 1em;
+}
+
+/* navigation drawer item bg */
+#nav-drawer .list-group-item {
+	background-color: var(--bg3);
+	border: 1px solid var(--bg2);
+	border-radius: 5px;
+	margin: 0.5em;
+	transition: all.25s ease-in-out;
+}
+
+#nav-drawer .list-group-item:hover, #nav-drawer .list-group-item:focus {
+	background-color: var(--bg2);
+	border: 1px solid var(--bg3);
+}
+
+		/* Elements */
+
+body {
+	background-color: var(--bg1) !important;
+}
+
+h1 {
+	font-family: var(--font, 'Open Sans') !important;
+	font-size: 1.5em !important;
+	color: var(--accent) !important;
+	text-transform: none;
+}
+
+h2 {
+	font-family: var(--font, 'Open sans') !important;
+	font-size: 1.0em !important;
+	color: var(--accent) !important;
+	text-transform: lowercase !important;
+}
+
+h3, h4 {
+	font-family: var(--font, 'Open Sans') !important;
+	color: var(--text1)!important;
+}
+
+a {
+	color: var(--text2) !important;
+}
+
+h1 > a {
+	font-family: var(--font);
+	color: var(--accent) !important;
+	font-size: 1.0em;
+}
+
+p, li {
+	color: var(--text1);
+}
+
+hr {
+	border-top: 0.5px dotted var(--accent);
+	border-bottom: none !important;
+	/*border-bottom: 0.5px solid var(--accent);*/
+}
+
+		/* Content */
+
+.block, #course_list {
+	background-color: var(--bg1);
+	border-radius: 5px;
+}
+
+.currentcourse {
+	color: var(--text2);
+	margin: auto !important;
+}
+
+/* side-bar calendar */
+.block .minicalendar th, .block .minicalendar td {
+	color: var(--calfontcol);
+}
+
+.block .minicalendar td a {
+	color: var(--callinkcol) !important;
+}
+
+.block_course_overview_lite .userhidden {
+	background-color: var(--calovercol) !important;
+}
+
+/* cards: main content + sidebar containers */
+.card {
+	border-radius: 4px;
+	background-color: var(--bg2) !important;
+	border: none;
+}
+
+/* course outline header */
+#instance-185462-header {
+	text-transform: lowercase !important;
+}
+
+/* course simple/detailed selection */
+.nav-tabs .nav-link.active {
+	background-color: var(--bg3);
+}
+
+/* course list block properties */
+.block_course_overview_lite .currentcourse, .box {
+	background-color: var(--bg1);
+	border-radius: 5px;
+}
+
+.block_course_overview_lite .coursebox {
+	border: none;
+}
+
+#course_list {
+	padding-top: 5px;
+}
+
+.course_title {
+	margin: 15px;
+}
+
+.course-content ul.ctopics li.section .content div.toggle:hover {
+	background-color: var(--accent);
+}
+
+/* margin between section twirl-downs(?) */
+.course-content ul.ctopics li.section.main .content,
+.course-content ul.ctopics li.tcsection .content {
+	margin: 5px 40px;
+}
+
+.nav-tabs {
+	border-bottom: none;
+}
+
+	/* Course Content */
+/* course content section toggles/headers */
+.course-content ul.ctopics li.section .content .toggle,
+.course-content ul.ctopics li.section .content.sectionhidden {
+	background-color: var(--bg3);
+}
+
+/* borders and colours around course content blocks */
+.course-content ul.topics li.section {
+	background-color: var(--bg2);
+	border: none;
+	border-radius: 15px;
+	margin: 10px;
+}
+
+/* container that usually appears in a subpage (like for a submission) */
+.no-overflow {
+	margin: 2em;
+}
+
+/* related to .no-overflow, but this is the div it's housed in */
+#intro {
+	margin-bottom: 2em;
+}
+
+/* page jumper list, usually at the bottom of a course sub-page */
+.custom-select {
+	background: var(--accent);
+	font-family: var(--font);
+}
+
+.custom-select:focus{
+	border-color: var(--bg1);
+}
+
+	/* Instructor/whatever page stuff */
+/* instructor course tour, but hits other thigns too */
+body#page-course-view-topics {
+	color: var(--text1);
+}
+
+/* popup footer border */
+.modal-footer,
+.moodle-dialogue-base .moodle-dialogue .moodle-dialogue-content
+.moodle-dialogue-ft {
+	border-top: 1px dotted var(--accent);
+}
+
+.region_main_settings_menu_proxy {
+	background-color: var(--bg2);
+}
+
+/* course main header card thing: could be *dangerous* to remove idk */
+.course-content ul li.section.main {
+	border-bottom: none /*1px dotted var(--accent);*/;
+}
+
+body#page-mod-glossary-view {
+	color: var(--text1);
+}
+
+	/* Submission Page Tables */
+/* table.generaltable is a weird, keep an eye out for dodgy tables */
+table.generaltable  {
+	background-color: var(--bg3);
+	color: var(--text2);
+}
+
+.generaltable td, table.quizreviewsummary th.cell {
+	border: 3px dotted var(--bg3);
+	font-family: var(--font);
+}
+
+table.quizreviewsummary td.cell {
+	background-color: var(--bg2);
+}
+
+/* handles colour for once an assignment has been submitted + early submisson */
+.path-mod-assign td.submissionstatussubmitted,
+.path-mod-assign div.submissionstatussubmitted,
+.path-mod-assign a:link.submissionstatussubmitted,
+.path-mod-assign td.earlysubmission,
+.path-mod-assign div.earlysubmission {
+	background-color: var(--positivebg) ;
+	color: var(--positivefg);
+}
+
+/*handles colour of submission not graded*/
+.path-mod-assign td.submissionnotgraded,
+.path-mod-assign div.submissionnotgraded{
+	background-color: var(--bg2);
+	color: var(--text1);
+}
+
+/* computes and assigns a different colour to every other row */
+.table-striped tbody tr:nth-of-type(2n+1),
+table.collection tbody tr:nth-of-type(2n+1),
+table#explaincaps tbody tr:nth-of-type(2n+1),
+table#defineroletable tbody tr:nth-of-type(2n+1),
+table.grading-report tbody tr:nth-of-type(2n+1),
+table#listdirectories tbody tr:nth-of-type(2n+1),
+table.rolecaps tbody tr:nth-of-type(2n+1),
+table.userenrolment tbody tr:nth-of-type(2n+1),
+form#movecourses table tbody tr:nth-of-type(2n+1),
+#page-admin-course-index .editcourse tbody tr:nth-of-type(2n+1),
+.forumheaderlist tbody tr:nth-of-type(2n+1),
+table.flexible tbody tr:nth-of-type(2n+1),
+.generaltable tbody tr:nth-of-type(2n+1),
+table.quizreviewsummary th.cell:nth-of-type(2n+1),
+.path-grade-report-user .user-grade.generaltable .levelodd
+/*##1 the last entry is not a fix*/{
+	background-color: var(--bg1) !important;
+}
+
+/*
+this monstrosity seems to handle most (if not all) the submission type
+buttons (submit/modify) focus/hover colour, including in instructor views too
+(rubric/gradingform). This is also complete garbage.
+================================================================================
+.btn:hover, #page-grade-grading-manage .actions .action:hover,
+#rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel
+input:hover,
+#rubric-rubric.gradingform_rubric .addcriterion:hover,
+.btn:active, #page-grade-grading-manage .actions .action:active,
+#rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel
+input:active,
+#rubric-rubric.gradingform_rubric .addcriterion:active,
+.btn:focus, #page-grade-grading-manage .actions .action:focus,
+#rubric-rubric.gradingform_rubric #rubric-criteria .criterion
+.addlevel input:focus,
+#rubric-rubric.gradingform_rubric .addcriterion:focus, .btn:active:focus,
+#page-grade-grading-manage .actions .action:active:focus,
+#rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel
+input:active:focus,
+#rubric-rubric.gradingform_rubric .addcriterion:active:focus, button:hover,
+button:active, button:focus, button:active:focus,
+html [type="button"]:hover, [type="reset"]:hover, [type="submit"]:hover{
+	box-shadow: 2px 2px 2px var(--accent);
+}
+*/
+
+/* colour of the text below the modify/submit button, don't know beyond that */
+body#page-mod-assign-view {
+	color: var(--text2);
+}
+
+/* handling the button appearance and focus/hover */
+.btn-secondary, .btn-default, button {
+	color: var(--text1);
+	background-color: var(--bg3);
+	border-color: var(--accent);
+	transition: all.25s ease-in-out;
+}
+
+.btn-secondary:hover, .btn-default:hover, .btn-secondary:focus,
+.btn-default:focus, button:hover, button:focus {
+	color: var(--text1);
+	background-color: var(--bg2);
+	border-color: var(--bg3);
+}
+
+/* property of file-manager (submission box) */
+.filemanager .fp-restrictions{
+	font-family: var(--font);
+}
+
+/*
+changes colour of (I think) any fontawesome icon that shows up around
+these pages, such as on a submission page (plus icons) and usermenu
+*/
+a .icon {
+	color: var(--accent);
+}
+
+/* padding of icons tend to be pretty bad (by my own doing or by default) */
+.fa-plus-square::before{
+	padding-left: 5px;
+}
+
+/* some other table property */
+.table th, table.collection th, table.flexible th, .generaltable th,
+.table td, table.collection td, table.flexible td, .generaltable td {
+	border-top: none;
+}
+
+.table thead th, table.collection thead th, table.flexible thead th,
+.generaltable thead th {
+	border-bottom: none;
+}
+
+/* this has got to break more than I expect */
+.no-overflow {
+	overflow: visible;
+}
+
+	/* submission box file manager */
+/* little span title above file manager */
+.col-form-label {
+	font-family: var(--font);
+	color: var(--text1);
+	padding-left: 1em;
+}
+/* filemanager, but this line is actually more op than that. should be 'fine' */
+.card, #page-enrol-users #filterform, .que .history,
+.userprofile .profile_tree section, .groupinfobox,
+.forumpost, .yui-skin-sam .yui-layout.path-mod-chat-gui_ajax
+.yui-layout-unit-right,
+.yui-skin-sam .yui-layout.path-mod-chat-gui_ajax .yui-layout-unit-bottom,
+.yui-skin-sam .yui-layout.path-mod-chat-gui_ajax #chat-messages
+.chat-message.course-theme,
+.well {
+	margin-right: 0em;
+}
+
+/* restrictions span text */
+.filemanager .fp-restrictions {
+	color: var(--text1);
+	padding-right: 1em;
+}
+
+/* toolbar/viewbar padding */
+.fp-toolbar, .fp-viewbar {
+	padding: 0.5em;
+}
+
+/*more buttons than in folder view bar but w/e*/
+.btn-secondary:active, .btn-default:active, .btn-secondary.active,
+.fp-viewbar:not(.disabled) a.checked, .btn-default.active,
+.open > .btn-secondary.dropdown-toggle,
+.open > .btn-default.dropdown-toggle {
+	background-color: var(--bg2);
+	border: 2px dotted var(--positivefg);
+}
+
+/* hover/focus colour of the selected folder view, and more */
+.btn-secondary:active:hover,
+.btn-default:active:hover,
+.btn-secondary.active:hover,
+.fp-viewbar:not(.disabled) a.checked:hover,
+.btn-default.active:hover,
+.open > .btn-secondary.dropdown-toggle:hover,
+.open > .btn-default.dropdown-toggle:hover,
+.btn-secondary:active:focus,
+.btn-default:active:focus,
+.btn-secondary.active:focus,
+.fp-viewbar:not(.disabled) a.checked:focus,
+.btn-default.active:focus,
+.open > .btn-secondary.dropdown-toggle:focus,
+.open > .btn-default.dropdown-toggle:focus,
+.btn-secondary:active.focus,
+.btn-default:active.focus,
+.btn-secondary.active.focus,
+.fp-viewbar:not(.disabled) a.checked.focus,
+.btn-default.active.focus,
+.open > .btn-secondary.dropdown-toggle.focus,
+.open > .btn-default.dropdown-toggle.focus {
+	background-color: var(--bg2);
+}
+
+/* icon-view file appearance */
+.fp-iconview .fp-file {
+	font-family: var(--font);
+	padding: 1em;
+}
+
+/* icon-view thumbnail appearance */
+.fp-iconview .fp-thumbnail, .fp-iconview .fp-thumbnail img {
+	border: 1px dotted var(--accent);
+	background: var(--bg3);
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+.fp-iconview .fp-filename-field .fp-filename {
+	background: var(--bg3);
+	padding-left: 5px;
+}
+
+/* table/list-view for filemanager */
+.yui3-skin-sam .yui3-datatable-table {
+	font-family: var(--font);
+}
+
+.filemanager .yui3-datatable-header,
+.filemanager .yui3-datatable-even .yui3-datatable-cell {
+	background: var(--bg3) !important;
+	border-bottom: 1px dotted var(--accent) !important;
+	color: var(--text2) !important;
+	text-shadow: none;
+}
+
+/* sort indicator visibility */
+.yui3-skin-sam .yui3-datatable-sort-indicator {
+	filter: invert(1);
+}
+
+	/* modify work dialog box */
+.modal-content,
+.moodle-dialogue-base .moodle-dialogue-wrap.moodle-dialogue-content {
+	background-color: var(--bg3);
+	border: 1px solid var(--accent);
+}
+
+/* file title */
+.modal-header, .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd,
+.path-mod-assign [data-region="grade-panel"] .popout > .col-md-3 {
+	border-bottom: 1px dotted var(--accent);
+	padding: 10px 5px 0px 10px;
+}
+
+/* close dialog button */
+.close, .moodle-dialogue-base .closebutton {
+	color: var(--accent);
+}
+
+/* body text of submission editor */
+body#page-mod-assign-editsubmission {
+	font-family: var(--font);
+	color: var(--text1);
+}
+
+/* textfield in a form, here in the submission editor */
+.form-control {
+	font-family: var(--font);
+	color: var(--text2) !important;
+	background-color: var(--bg1);
+	transition: all.25s ease-in-out;
+}
+
+.form-control::placeholder {
+	color: var(--bg2);
+}
+
+.form-control:focus {
+	background-color: var(--bg3);
+	border-color: var(--accent);
+}
+	
+/* textfield border colour with danger/warning */
+.has-danger .form-control {
+	border-color: var(--negativefg);
+}
+
+/* textfield error icon colour*/
+.text-danger, .notconnected, .que .validationerror, .text-error {
+	color: var(--negativefg) !important;
+}
+
+/* file icon at base of submission editor */
+.fp-select .fp-thumbnail, .fp-select .fp-thumbnail img {
+	background: var(--bg1);
+	border: none;
+}
+
+/* submit/save button; 'primary button' */
+.btn-primary {
+	background-color: var(--positivefg);
+	border-color: var(--positivebg);
+	color: var(--bg0);
+	transition: all.25s ease-in-out;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+	background-color: var(--positivebg);
+	border-color: var(--bg3);
+	color: var(--positivefg);
+}
+
+		/* Quiz Page */
+
+	/* disclaimer (honesty check) popup + body/title */
+/* disclaimer body stuff */
+body#page-mod-quiz-view, body#page-mod-quiz-review {
+	font-family: var(--font);
+	color: var(--text1);
+}
+
+/* disclaimer title stuff */
+.moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd.yui3-widget-hd {
+	color: var(--accent);
+	text-transform: lowercase;
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+/* disclaimer main box */
+.mform fieldset {
+	border-bottom: 1px dotted var(--accent);
+	margin-left: 0rem;
+}
+
+/* honesty check error (seems to handle more, so that's nice) */
+.has-danger .form-control-feedback, .has-danger #adminsettings .form-overridden,
+#adminsettings .has-danger .form-overridden {
+	color: var(--negativefg);
+}
+
+/* quiz information item (answered/notyetanswered) */
+.que .info {
+	background-color: var(--bg3);
+	border: 1px solid var(--accent);
+	border-radius: 5px;
+}
+
+.que .formulation p {
+	color: var(--accent);
+}
+
+/* quiz attempt body */
+body#page-mod-quiz-attempt {
+	font-family: var(--font);
+	color: var(--text1);
+	text-align: center;
+}
+
+/* question flag image */
+.questionflagimage {
+	filter: invert(1);
+}
+
+/* quiz question box (amongst other things it is going to ruin) */
+.alert-info, #page-admin-index .releasenoteslink,
+#adminsettings .form-overridden,
+.que .formulation {
+	background-color: var(--bg1);
+	border: 1px solid var(--accent);
+	/*border-radius: .25rem*/
+	border-radius: 5px;
+	color: var(--text2);
+}
+
+/* quiz navigation block */
+.path-mod-quiz #mod_quiz_navblock .qnbutton {
+	background-color: var(--bg3);
+	border-radius: 5px;
+}
+
+/* quiz traffic number (tp portion) */
+.path-mod-quiz #mod_quiz_navblock .qnbutton .thispageholder {
+	border: 1px dotted var(--accent);
+}
+
+/* quiz traffic light (question seen/answered or not) */
+.path-mod-quiz #mod_quiz_navblock .qnbutton.notyetanswered .trafficlight,
+.path-mod-quiz #mod_quiz_navblock .qnbutton.invalidanswer .trafficlight {
+	background-color: var(--bg1);
+	border-radius: 0 0 5px 5px;
+}
+
+/* quiz question answered traffic light */
+.path-mod-quiz #mod_quiz_navblock .qnbutton.complete .trafficlight,
+.path-mod-quiz #mod_quiz_navblock .qnbutton.answersaved .trafficlight,
+.path-mod-quiz #mod_quiz_navblock .qnbutton.requiresgrading .trafficlight {
+	/*change colour to affirmative-green?*/
+	background-color: var(--text1);
+}
+
+/* error message */
+.errorcode a {
+	color: var(--negativefg);
+}
+
+	/* editor */
+/* editor toolbar/statusbar */
+div.editor_atto_toolbar, .editor_atto_statusbar {
+	background: var(--bg2);
+	border: 1px dotted var(--accent);
+}
+
+/* editor statusbar element (word counter) */
+.editor_atto_statusbar_elem {
+	border: 1px solid var(--bg3);
+	border-radius: 5px;
+	background: var(--accent);
+	color: var(--bg0);
+}
+
+/* editor text area, less obtrusive the better */
+.editor_atto_content_wrap, .editor_atto + textarea {
+	border: 1px solid var(--accent);
+}
+
+/* need better solution for faithful editor textbox */
+.editor_atto_content_wrap {
+	background: var(--bg1);
+}
+
+/* quiz drag+drop boxes */
+.que.ddwtos .group1 {
+	background-color: var(--bg3);
+}
+
+.que.ddwtos .drop {
+	border: 1px solid var(--accent);
+}
+
+/* feeback on completed quiz */
+#page-mod-quiz-view .generalbox#feedback {
+	/*width: 100%;*/
+	margin-bottom: 1rem;
+}
+
+#page-mod-quiz-view .generalbox#feedback h3 {
+	text-align: center;
+}
+
+	/* quiz review */
+/* question alert */
+.alert-warning, #page-admin-index .adminwarning,
+.uninstalldeleteconfirmexternal, .que .outcome, .que .comment {
+	background-color: var(--text1) /*var(--text2)*/;
+	border-color: var(--text2);
+	color: var(--bg2);
+}
+
+/* text box - readonly */
+.que.essay .qtype_essay_response.readonly {
+	background-color: var(--bg3);
+	padding-left: 0.5rem;
+}
+
+.que .specificfeedback, .que .generalfeedback,
+.que .numpartscorrect .que .rightanswer, .que .im-feedback,
+.que .feedback, .que p {
+	color: var(--bg2);
+}
+
+.rightanswer a {
+	color: var(--bg3) !important;
+	border: 1px dotted var(--accent);
+}
+
+		/* mobile Header */
+/* the only bit that's survived from this rewrite (so, not written?) */
+
+.view-selector > li {
+	float: none;
+	text-align: center;
+	border-bottom: 3px dotted var(--bg3);
+	display: inline-block !important;
+}
+
+ul.view-selector {
+	text-align: center;
+}
+
+.navbar-fixed-top {
+	background-color: var(--bg2);
+	background-image: var(--bg2);
+}
+
+.active .mobile-nav-icon::before {
+	color: var(--accent) !important;
+}
+}
+
+@-moz-document url-prefix("https://eclass.srv.ualberta.ca/my/") {
+/* meek */
+/* apply only to landing page */
+
+.page-context-header{
+	display: none;
+}
+}
+
+@-moz-document domain("login.ualberta.ca") {
+/* meek*
+/* things (that used) to apply to the single-login page*/
+
+:root {
+	--bg0:    #fff !important;
+	--bg1:    #2d2330 !important;
+	--bg2:    #0e0b0f !important;
+	--bg3:    #625166 !important;
+	--text1:  #d0c9c6 !important;
+	--text2:  #b7bdc1 !important;
+	--accent: #b0a8e6 !important;
+
+	--font: 'Anonymous Pro' !important;
+}
+	
+		/* Header/Footer */
+
+.blade {
+	background-color: var(--bg1);
+	border-bottom: none/*3px dotted var(--accent)*/;
+}
+
+.navbar-menu {
+	background-image: none;
+	background-color: var(--bg1);
+	border-bottom: none;
+	display: none;
+}
+
+.navbar-menu > .container, .navbar-footer > .container {
+	min-height: 40px;
+}
+
+/* this fixes something with the spacing after the image is removed */
+.navbar > .container .navbar-brand,
+.navbar > .container-fluid .navbar-brand{
+	margin-left: auto;
+}
+
+.navbar-brand img, .navbar-brand a {
+	filter: grayscale(1);
+	height: auto;
+	width: 7em;
+	color: var(--text2);
+}
+
+.navbar-footer {
+	background-color: var(--bg1);
+	border-top: none;
+	/*border-top: 3px dotted var(--accent);*/
+	color: var(--text1);
+	text-transform: lowercase;
+}
+
+.navbar-footer .copyright {
+	text-align: center;
+}
+
+.navbar-footer .copyright a {
+	color: var(--text2);
+}
+
+.navbar-footer .navigation {
+	margin-top: 0;
+}
+
+		/* Elements */
+body {
+	background-color: var(--bg1);
+	font-family: var(--font);
+}
+
+		/* Panel */
+
+.panel {
+	padding-top: 1em;
+	background: var(--bg3);
+	border: 1px dotted var(--accent);
+	color: var(--text1);
+}
+
+.login > h1, .login > h2 {
+	display: none;
+}
+
+.row {
+	padding-top: 50px;
+
+}
+
+.form-control{
+	background-color: var(--bg1);
+
+}
+
+.form-control::-moz-placeholder, .form-control::-webkit-placeholder {
+	color: var(--accent);
+}
+
+/* technically this line should work , and not the one above */
+.form-control::placeholder {
+	color: var(--text2);
+	text-transform: lowercase;
+}
+
+.login input {
+	color: var(--accent);
+	border: 1px solid var(--accent);
+}
+
+.login input:focus{
+	border: 1px solid var(--accent);
+}
+
+.login .forgot-password {
+	text-align: center;
+}
+
+.login .forgot-password a {
+	text-transform: lowercase;
+	color: var(--accent);
+}
+
+
+.btn-default {
+	background: var(--accent);
+	font-family: var(--font) !important;
+	text-transform: lowercase;
+	transition: all.25s ease-in-out;
+}
+
+.login input[type="submit"] {
+	color: var(--bg1);
+}
+
+.login input[type="submit"]:hover, .login input[type="submit"]:focus {
+	color: var(--accent);
+}
+
+/*error text for a failed login*/
+.login .error {
+	font-family: var(--font);
+	color: var(--negativefg);
+	text-align: center;
+	text-transform: lowercase;
+}
+
+.btn-default:hover, .btn-default:focus {
+	background-color: var(--bg2);
+	color: var(--accent);
+	border-color: var(--accent);
+}
+
+		/* Mobile */
+.blade .navbar-toggle {
+	background-color: var(--bg3);
+	color: var(--text1);
+	border: 1px solid var(--accent);
+}
+}
