@@ -1,7 +1,11 @@
 # meek
 A shy style that hardly works.
 
-> Update someday this semester.
+## New! Install as a UserCSS
+> Will update the README.md later
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/FineCervine/meek/master/meek.user.css)
+
+---
 
 ## Intro
 The purpose of this stylesheet is to make eClass (Moodle) a bit more usable at
@@ -11,7 +15,7 @@ or more; in fact, it tends to break things.
 
 This will be made into a [UserCSS](https://github.com/openstyles/stylus/wiki/Usercss).
 
-## Use/Installation
+## (Old) Use/Installation
 Use a user styles manager like [Stylus](https://github.com/openstyles/stylus/)
 (available for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
 and [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne))
