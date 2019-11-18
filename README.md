@@ -2,6 +2,8 @@
 
 A shy style that hardly works.
 
+![Mobile Main Page Screenshot](https://raw.githubusercontent.com/FineCervine/meek/master/mobile_main.png)
+
 ## Intro
 
 The *original* goal of this stylesheet was to create a dark style for eClass, but I've since started using [Dark Reader](https://darkreader.org) and adapt my style to better suit my needs. *meek* features increased padding, different typefaces, adjusted mobile view for small viewports/phones, some basic animations, and all around broken experience. It really is tuned to my preferences and my D.E., so go wild and make it yours.
@@ -48,3 +50,7 @@ If you're using [Stylus](https://github.com/openstyles/stylus/):
 
 ## How to (Usually) Fix Poor Visibility
 <kbd>CTRL</kbd>+<kbd>A</kbd>
+
+## How Course Names Were Changed
+
+Really basic and garbage userscript. Only works on main page and is hard-coded, for now.
