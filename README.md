@@ -2,7 +2,7 @@
 
 A shy style that hardly works.
 
-![Mobile Main Page Screenshot](https://raw.githubusercontent.com/FineCervine/meek/master/mobile_main.png)
+![Mobile Main Page Screenshot](https://raw.githubusercontent.com/FineCervine/meek/master/meek.gif)
 
 ## Intro
 
