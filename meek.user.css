@@ -116,9 +116,15 @@
 	font-size: 1.0em;
 }
 
-#page-footer.bg-inverse {
+#page-footer.bg-inverse, #page-footer.bg-dark {
 	background-color: var(--bg2) !important;
 	filter: blur(2px);
+    transition: all .25s ease-in-out;
+}
+
+#page-footer.bg-inverse:hover, #page-footer.bg-dark:hover {
+	background-color: var(--bg2) !important;
+	filter: blur(0px);
 }
 
 /* dropdown menu tp rt */
@@ -231,10 +237,9 @@ hr {
 	background-color: var(--bg1);
 	border-radius: 5px;
 }
-
-.currentcourse {
-	color: var(--text2);
-	margin: auto !important;
+    
+.box .py-3 .welcome_area {
+    margin: 1em;        
 }
 
 /* side-bar calendar */
@@ -272,6 +277,11 @@ hr {
 	background-color: var(--bg1);
 	border-radius: 5px;
 }
+    
+.currentcourse, .nav {
+	color: var(--text2);
+	margin: 1em auto 1em auto;
+}
 
 .block_course_overview_lite .coursebox {
 	border: none;
@@ -290,9 +300,19 @@ hr {
 }
 
 /* margin between section twirl-downs(?) */
-.course-content ul.ctopics li.section.main .content,
+/* .course-content ul.ctopics li.section.main .content,
 .course-content ul.ctopics li.tcsection .content {
-	margin: 5px 40px;
+	margin: 1em 1em;
+} */
+    
+.course-content ul.ctopics li.section.main, 
+.course-content ul.ctopics li.tcsection,
+.format-topcoll .course-content .single-section .section-navigation {
+    margin: 0.5em 0 0.5em 0;
+}
+    
+.course-content .current::before {
+    border-left: var(--accent) 2px solid;
 }
 
 .nav-tabs {
