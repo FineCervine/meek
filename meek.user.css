@@ -9,15 +9,15 @@
 @updateURL https://raw.githubusercontent.com/FineCervine/meek/master/meek.user.css
 
 
-@advanced color bg0 "Main bg" #000000
-@advanced color bg1 "Sub-bg 1" #2d2330
-@advanced color bg2 "Sub-bg 2" #0e0b0f
-@advanced color bg3 "Sub-bg 3" #625166
-@advanced color text1 "Text 1" #d0c9c6
-@advanced color text2 "Text 2" #b7bdc1
-@advanced color accent "Accent" #b0a8e6
+@advanced color bg0 "Main bg" #faf4ed
+@advanced color bg1 "Sub-bg 1" #fffaf3
+@advanced color bg2 "Sub-bg 2" #f2e9e1
+@advanced color bg3 "Sub-bg 3" #fff
+@advanced color text1 "Text 1" #575279
+@advanced color text2 "Text 2" #286983
+@advanced color accent "Accent" #d7827e
 
-@advanced text font "Font" "Anonymous Pro"
+@advanced text font "Font" "Arial"
 
 @advanced color calfontcol "Calendar font colour" #ffffff
 @advanced color callinkcol "Calendar link colour" #000000
